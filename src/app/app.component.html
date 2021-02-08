@@ -1,6 +1,6 @@
 <div class="formContainer">
   <h1>Login Form</h1>
-  <form #simpleForm="ngForm" (ngSubmit)=GetValue(simpleForm)>
+  <form #simpleForm="ngForm" class="d-flex flex-column" (ngSubmit)=GetValue(simpleForm)>
     <input type="text" ngModel name="email" placeholder="Enter your email" required /><br>
     <span *ngIf="invalidEmail">INVALID EMAIL</span>
     <br>
