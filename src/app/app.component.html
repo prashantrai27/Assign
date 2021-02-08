@@ -1,0 +1,15 @@
+<div class="formContainer">
+  <h1>Login Form</h1>
+  <form #simpleForm="ngForm" (ngSubmit)=GetValue(simpleForm)>
+    <input type="text" ngModel name="email" placeholder="Enter your email" required /><br>
+    <span *ngIf="invalidEmail">INVALID EMAIL</span>
+    <br>
+    <input type="password" ngModel name="password" placeholder="Enter your password" required /><br>
+    <span *ngIf="invalidPass">INVALID PASSWORD</span>
+    <br>
+    <button class="btn btn-light" type="submit" routerLink="home">Login</button>
+  </form>
+</div>
+<div class="outputContainer" *ngIf="isValid"> 
+  <router-outlet></router-outlet>
+</div>

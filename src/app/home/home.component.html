@@ -1,0 +1,40 @@
+  <!-- <table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>UserId</th>
+    </tr>
+    <tr *ngFor='let item of data'>
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.userId}}</td>
+    </tr>
+</table> -->
+<app-header></app-header>
+
+    <!-- <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tr *ngFor='let item of users'>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.phone}}</td>
+        </tr>
+    </table> -->
+
+    <div class="cardContainer" *ngFor="let item of users">
+        <mat-card class="shadow margin20">
+            <mat-card-title>{{item.name}}</mat-card-title>
+            <mat-card-subtitle>{{item.email}}</mat-card-subtitle>
+            <mat-card-content>{{item.phone}}</mat-card-content>
+            <mat-card-actions>
+                <button mat-stroked-button color="accent" routerLink ="/profile">
+                    Open Profile 
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+<app-footer></app-footer>
