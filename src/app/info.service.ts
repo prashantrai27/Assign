@@ -11,10 +11,18 @@ export class InfoService {
 
   constructor(private http: HttpClient) { }
 
-  getData() : Observable <any> {
+  getData(url : string) : Observable <any> {
 
-    let url = 'https://jsonplaceholder.typicode.com/users';   //thats how we fetch data from upi using services
+    // let url = 'https://jsonplaceholder.typicode.com/users';   //thats how we fetch data from upi using services
     return this.http.get(url);
     
+  }
+
+  // <img class="apiImage" src = "{{ ---- }}" alt />
+
+  getProfileData(url : string) : Observable <any> {
+
+    // url = 'https://jsonplaceholder.typicode.com/users';   //thats how we fetch data from upi using services
+    return this.http.get(url);
   }
 }

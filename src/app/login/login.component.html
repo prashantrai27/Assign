@@ -1,0 +1,16 @@
+<div class="formContainer">
+    <h1>Login Form</h1>
+    <form #simpleForm="ngForm" class="d-flex flex-column" >
+
+      <input class="form-control"  id="email" type="text" ngModel name="email" placeholder="Enter your email" required /><br>
+      <span class="invalid" *ngIf="invalidEmail">INVALID EMAIL</span>
+      <br>
+      <input class="form-control" id="pass" type="password" ngModel name="password" placeholder="Enter your password" required /><br>
+      <span class="invalid" *ngIf="invalidPass">INVALID PASSWORD</span>
+      <br>
+      <button class="btn btn-light" (click) ="GetValue(simpleForm)">Login</button>
+    </form>
+  </div>
+  <!-- <div class="outputContainer" *ngIf="isValid"> 
+    <router-outlet></router-outlet>
+  </div> -->

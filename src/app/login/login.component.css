@@ -1,0 +1,24 @@
+.formContainer{
+    width: 300px;
+margin: auto;
+padding-top: 50px;
+}
+
+h1{
+    padding: 10px;
+    background-color: blue;
+    color: white;
+}
+
+.invalid {
+    color:darkred;
+}
+
+.error {
+    border-color: red !important;
+    color:red !important;
+}
+
+.error::placeholder {
+    color: darkred;
+}

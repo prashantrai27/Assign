@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private user: InfoService) {
     
-    this.user.getData()
+    this.user.getData('https://jsonplaceholder.typicode.com/users')
       .subscribe(
         (data) => {
           console.log(data);
