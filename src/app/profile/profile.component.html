@@ -12,6 +12,7 @@
             <a class="nav-link" href="#">Details</a>
           </li>
       </ul>
+      
         <!-- <div class="input-group">
         <div class="form-outline">
           <input type="search" id="form1" class="form-control" />
@@ -26,10 +27,20 @@
         </button> -->
       </div>
       <div class="rightContainer">
-        <a class="nav-link" href="#">Prashant Rai</a>
+        <a class="nav-link" routerLink="/login">Prashant Rai</a>
       </div>
     </div>
   
   </nav>
-<p>profile works!</p>
+  <!-- {{profileData}} -->
+  
+    <mat-card>
+      <h3>{{profileData.name}}</h3>
+      <h3>{{profileData.id}}</h3>
+      <h3>{{profileData.phone}}</h3>
+      <h3>{{profileData.email}}</h3>
+      <h3>{{profileData.address.street}}</h3>
+    </mat-card>
+      
+      
 <app-footer></app-footer>

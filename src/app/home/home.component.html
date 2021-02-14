@@ -31,7 +31,7 @@
             <mat-card-subtitle>{{item.email}}</mat-card-subtitle>
             <mat-card-content>{{item.phone}}</mat-card-content>
             <mat-card-actions>
-                <button mat-stroked-button color="accent" routerLink ="/profile">
+                <button (click)="getVal(item)" mat-stroked-button color="accent">
                     Open Profile 
                 </button>
             </mat-card-actions>
