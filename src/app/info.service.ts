@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, JsonpClientBackend } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from './model/user';
 @Injectable({
@@ -10,9 +10,28 @@ export class InfoService {
   private data: any = [];
 
   constructor(private http: HttpClient) { }
-
+d:any;
   public isAuthenticated():boolean {
+  this.d = sessionStorage.getItem('userData');
+    if(this.d && this.d.length > 0){
+        return true;
+    }
     return false;
+  }
+
+  async Login(postData:any){
+    const responseData = {
+      name: "Prashant Rai",
+      id: '001',
+      token: "23XH5"
+    }
+     await sessionStorage.setItem('userData',JSON.stringify(responseData));
+     return true;
+  }
+  async Logout(){
+    await sessionStorage.removeItem('usersData');
+    await sessionStorage.clear();
+    return true;
   }
 
   getData(url : string) : Observable <any> {
