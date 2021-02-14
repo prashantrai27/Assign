@@ -1,4 +1,4 @@
-<div class="formContainer">
+<!-- <div class="formContainer">
     <h1>Login Form</h1>
     <form #simpleForm="ngForm" class="d-flex flex-column" >
 
@@ -11,6 +11,21 @@
       <button class="btn btn-light" (click) ="GetValue(simpleForm)">Login</button>
     </form>
   </div>
+  ---------------------------------------------------------------------------- -->
   <!-- <div class="outputContainer" *ngIf="isValid"> 
     <router-outlet></router-outlet>
   </div> -->
+  <div class="formContainer">
+    <h1>Login Form</h1>
+    <form class="d-flex flex-column" >
+
+      <input class="form-control"   type="text" [(ngModel)]='postData.email' placeholder="Enter your email" name="email"  /><br>
+    
+      <br>
+      <input class="form-control"  type="password" [(ngModel)]='postData.password'  placeholder="Enter your password" name="password" /><br>
+      <span [ngStyle]="{'color':'red'}">{{errorText}}</span>
+      <br>
+      
+      <button class="btn btn-light" (click) ="getValue()">Login</button>
+    </form>
+  </div>
