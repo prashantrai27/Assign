@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
   }
 
   getVal(item:any){
-      this.router.navigate(['/profile',item.id])
+      this.router.navigate(['prashant/profile',item.id])
   }
 
  

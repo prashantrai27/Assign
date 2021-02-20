@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     if(this.postData.email && this.postData.password){
       // console.log(this.postData)
       this.infoservice.Login(this.postData);
-      this.router.navigate(['/home']);
+      this.router.navigate(['prashant/home']);
     }else{
         this.errorText = "Please give valid data";
     }

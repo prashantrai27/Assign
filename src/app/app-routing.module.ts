@@ -9,9 +9,9 @@ const routes: Routes = [
   // {path:"",redirectTo:"/login", pathMatch:'full'},
   
   {path:"",component:LoginComponent},
-  {path:"home",component:HomeComponent,canActivate:[AuthGuard]},
+  {path:"prashant/home",component:HomeComponent,canActivate:[AuthGuard]},
   {path:"login",component:LoginComponent},
-  {path:'profile/:id',component:ProfileComponent,canActivate:[AuthGuard]},
+  {path:'prashant/profile/:id',component:ProfileComponent,canActivate:[AuthGuard]},
   {path:"**",component:LoginComponent}
 ];
 
