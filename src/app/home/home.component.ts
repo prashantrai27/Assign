@@ -35,13 +35,14 @@ export class HomeComponent implements OnInit {
         }
       );
   }
-
+  
   ngOnInit(): void {
 
   }
 
   getVal(item:any){
       this.router.navigate(['prashant/profile',item.id])
+      console.log("this is just a test.");
   }
 
  
