@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
 
   getVal(item:any){
       this.router.navigate(['prashant/profile',item.id])
-      console.log("this is just a test.");
+      // console.log("this is just a test.");
   }
 
  
